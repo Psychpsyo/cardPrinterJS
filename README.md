@@ -56,12 +56,11 @@ The ``setCards()`` function takes the following parameters:
 
 ### Alignment of cards in Chromium-based browsers 
 Currently, there is no uniform cutting lines between cards and they aren't printed in the center of the page in Chromium-based browsers.  
-This is due to intentional fallback behavior until [this Chromium bug](https://issues.chromium.org/u/1/issues/327643792) gets fixed because the alternative is way worse.  
-(go and press "I am impacted" on that bug if you care.)
+This is due to intentional fallback behavior until the fix for [this Chromium bug](https://issues.chromium.org/issues/327643792) lands in Chrome 124, on Apr 10, 2024.  
 
 ### Image loading in Chromium-based browsers
 Currently, if you are calling ``setCards()`` in a ``beforeprint`` event handler and open the print dialog via the ``print()`` function, Chromium-based browsers sometimes fail to show all the cards in their print preview.  
-I have no idea if this affects the actual print but I'll be filing a bug report on this soon™.
+I have no idea if this affects the actual print but if you care, go an press "I am impacted" on [this Chromium bug](https://issues.chromium.org/issues/40262871). (It's the little +1 button in the top right)
 
 ### No regular page printing
 Currently, loading ``cardPrinter.mjs`` on a page inserts some css that'll make it impossible to make a regular printout of the page.  
